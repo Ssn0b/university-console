@@ -1,1 +1,23 @@
+spring:
 
+  flyway:
+    locations: classpath:db/migration
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/university-console
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: OFF
